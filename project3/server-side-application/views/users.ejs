@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Users</title>
+  <style>
+    .user-name {
+      color: rgb(0, 132, 255);
+      text-decoration: none;
+    }
+
+    .user-table-container {
+      padding: 10px;
+      margin-top: 0px;
+    }
+
+    .user-table-container h2 {
+      margin-left: 40px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid #ddd;
+      /* only bottom border to create horizontal lines */
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+      /* remove bottom border from the last row's cells */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="user-table-container">
+    <h2>Users Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(function(user) { %>
+          <tr>
+            <td class="user-name">
+              <%= user.name %>
+            </td>
+            <td>
+              <%= user.gender %>
+            </td>
+            <td>
+              <a href="#">Edit</a>
+            </td>
+            <td>
+              <a href="#">Delete</a>
+            </td>
+          </tr>
+          <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
