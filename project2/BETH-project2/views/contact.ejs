@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Form</title>
+  <style>
+    .form-container {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<div class="form-container">
+  <h8>Please fill in the form and click the submit button</h8><br><br>
+  <h8>We will contact you asap. Thank you!</h8><br><br>
+  <form action="/users/submit" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+    <label for="gender">Gender</label>
+    <input type="text" id="gender" name="gender" required>
+    <button type="submit">Submit</button>
+  </form>
+</div>

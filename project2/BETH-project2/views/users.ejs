@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Users</title>
+  <style>
+    .user-list-container {
+      position: relative;
+      padding: 10px;
+      margin-top: 0px;
+    }
+
+    .user-list-container h2 {
+      position: relative;
+      top: 0;
+      left: 40px;
+    }
+
+    .user-list-container ul {
+      list-style-type: none;
+      padding: 10 px;
+      margin: 0;
+    }
+
+    .user-list-container li {
+      margin-bottom: 10px;
+    }
+
+    .edit-button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<div class="user-list-container">
+  <h2>Our Users</h2>
+  <ul>
+    <% users.forEach(function(user) { %>
+    <li>
+      <p><%= user.name %></p>
+      <p>$<%= user.gender %></p>
+      <a href="/users/editUser/<%= user._id %>">Edit</a>
+    </li>
+    <% }); %>
+  </ul>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Form</title>
+  <style>
+    .form-container {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<div class="form-container" style="padding-left:140px; padding-top: 20px;">
+    <h2>Edit User</h2>
+    <form action="/users/updateUser/<%= user._id %>" method="post">
+      <label for="name">Enter Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="gender">Enter Gender:</label>
+      <input type="text" id="name" name="gender" required>
+      <button type="submit">Update</button>
+    </form>
+    <p>Not sure which user to update? <a href="/users">Check Existing Users</a></p>
+  </div>
