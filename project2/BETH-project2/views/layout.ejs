@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 0px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><span style="color: #07070693;">&#127795;</span> EJS is Fun</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users/deleteUser">Delete User</a>
+      </li>
+    </ul>
+  </nav>
+
+  <%- body %>
+</body>
+
+</body>
+<footer class="footer">
+  <div class="footer-content">
+    &copy; <h7> Copyright 2024, <%= new Date() %>
+    </h7>
+  </div>
+</footer>
+
+</html>
